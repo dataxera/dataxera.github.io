@@ -2,43 +2,44 @@
    Dataxera Sdn Bhd — Corporate & Dataxera Citadel Platform Design System
    Brand Palette Derived from Official Dataxera Logo Assets:
    - Primary Slate-Navy: #141c29 (rgb(20, 28, 41) / hsl(217, 34%, 12%))
-   - Primary Brand Teal: #108d87 (rgb(16, 141, 135) / hsl(177, 80%, 31%))
+   - Primary Brand Indigo: #4f46e5 (rgb(79, 70, 229) / hsl(243, 75%, 59%))
    ========================================================================== */
 
 :root {
-  /* Light Editorial Surfaces */
-  --bg-canvas: hsl(192, 24%, 97.5%);
+  /* Light Editorial Surfaces (Harmonized Cool-Indigo Neutrals) */
+  --bg-canvas: hsl(228, 30%, 98%);
   --bg-surface: hsl(0, 0%, 100%);
-  --bg-subtle: hsl(190, 22%, 94.5%);
-  --bg-elevated: hsl(190, 20%, 91.5%);
+  --bg-subtle: hsl(228, 28%, 95%);
+  --bg-elevated: hsl(228, 24%, 91.5%);
 
   /* Dark Architectural Surfaces (Anchored to #141c29 Brand Slate-Navy) */
-  --bg-obsidian: hsl(217, 38%, 8%);
+  --bg-obsidian: hsl(222, 40%, 8%);
   --bg-obsidian-surface: #141c29;
-  --bg-obsidian-elevated: hsl(217, 30%, 16%);
-  --bg-obsidian-subtle: hsl(217, 26%, 20%);
+  --bg-obsidian-elevated: hsl(222, 32%, 16%);
+  --bg-obsidian-subtle: hsl(222, 28%, 21%);
 
   /* Typography Colors */
   --text-primary: #141c29;
-  --text-secondary: hsl(217, 22%, 32%);
-  --text-muted: hsl(217, 15%, 46%);
-  --text-on-dark: hsl(190, 25%, 96%);
-  --text-on-dark-secondary: hsl(210, 18%, 76%);
-  --text-on-dark-muted: hsl(214, 14%, 58%);
+  --text-secondary: hsl(220, 22%, 32%);
+  --text-muted: hsl(220, 15%, 46%);
+  --text-on-dark: hsl(225, 35%, 97%);
+  --text-on-dark-secondary: hsl(222, 22%, 78%);
+  --text-on-dark-muted: hsl(222, 16%, 60%);
 
-  /* Official Dataxera Brand Palette (#108d87 Teal & #141c29 Slate-Navy) */
+  /* Official Dataxera Brand Palette (#4f46e5 Indigo & #141c29 Slate-Navy) */
   --brand-navy: #141c29;
-  --brand-teal: #108d87;
-  --brand-teal-hover: #0c706b;
-  --brand-teal-bright: #20c4bc;
-  --brand-teal-soft: hsl(177, 48%, 92.5%);
-  --brand-teal-subtle: hsla(177, 80%, 31%, 0.1);
+  --brand-accent: #4f46e5;
+  --brand-accent-hover: #4338ca;
+  --brand-accent-deep: #3730a3;
+  --brand-accent-bright: #818cf8;
+  --brand-accent-soft: hsl(239, 84%, 95%);
+  --brand-accent-subtle: hsla(243, 75%, 59%, 0.1);
 
   /* Structural Hairline Borders */
-  --border-light: hsl(205, 22%, 87%);
-  --border-light-strong: hsl(205, 20%, 76%);
-  --border-dark: hsla(190, 25%, 95%, 0.1);
-  --border-dark-strong: hsla(190, 25%, 95%, 0.18);
+  --border-light: hsl(224, 24%, 88%);
+  --border-light-strong: hsl(224, 22%, 78%);
+  --border-dark: hsla(228, 35%, 95%, 0.1);
+  --border-dark-strong: hsla(228, 35%, 95%, 0.18);
 
   /* Typography Families */
   --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -119,7 +120,7 @@ ul, ol {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--brand-teal);
+  color: var(--brand-accent);
   margin-bottom: 0.85rem;
 }
 
@@ -132,7 +133,7 @@ ul, ol {
 }
 
 .section-dark .section-kicker {
-  color: var(--brand-teal-bright);
+  color: var(--brand-accent-bright);
 }
 
 .section-title {
@@ -187,7 +188,7 @@ ul, ol {
   font-size: 0.72rem;
   font-weight: 700;
   color: #ffffff;
-  background: var(--brand-teal);
+  background: var(--brand-accent);
   padding: 0.16rem 0.6rem;
   border-radius: var(--radius-xs);
   letter-spacing: 0.04em;
@@ -203,7 +204,7 @@ ul, ol {
 }
 
 .utility-bar-right a:hover {
-  color: var(--brand-teal-bright);
+  color: var(--brand-accent-bright);
 }
 
 /* Primary Navigation Header */
@@ -248,8 +249,8 @@ ul, ol {
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--brand-teal);
-  background-color: var(--brand-teal-soft);
+  color: var(--brand-accent);
+  background-color: var(--brand-accent-soft);
   padding: 0.22rem 0.5rem;
   border-radius: var(--radius-xs);
   line-height: 1;
@@ -281,7 +282,7 @@ ul, ol {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: var(--brand-teal);
+  background-color: var(--brand-accent);
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.22s var(--ease-out);
@@ -324,15 +325,15 @@ ul, ol {
 }
 
 .btn-primary {
-  background-color: var(--brand-teal);
+  background-color: var(--brand-accent);
   color: #ffffff;
-  border: 1px solid var(--brand-teal);
+  border: 1px solid var(--brand-accent);
   box-shadow: var(--shadow-xs);
 }
 
 .btn-primary:hover {
-  background-color: var(--brand-teal-hover);
-  border-color: var(--brand-teal-hover);
+  background-color: var(--brand-accent-hover);
+  border-color: var(--brand-accent-hover);
   transform: translateY(-1px);
   box-shadow: var(--shadow-sm);
 }
@@ -345,8 +346,8 @@ ul, ol {
 
 .btn-secondary:hover {
   background-color: var(--bg-subtle);
-  border-color: var(--brand-teal);
-  color: var(--brand-teal);
+  border-color: var(--brand-accent);
+  color: var(--brand-accent);
 }
 
 .btn-dark-surface {
@@ -356,8 +357,8 @@ ul, ol {
 }
 
 .btn-dark-surface:hover {
-  background-color: var(--brand-teal);
-  border-color: var(--brand-teal);
+  background-color: var(--brand-accent);
+  border-color: var(--brand-accent);
   color: #ffffff;
 }
 
@@ -417,7 +418,7 @@ ul, ol {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--brand-teal);
+  color: var(--brand-accent);
 }
 
 .hero-lockup-sub {
@@ -536,7 +537,7 @@ ul, ol {
 }
 
 .stage-tab-btn.active {
-  background-color: var(--brand-teal);
+  background-color: var(--brand-accent);
   color: #ffffff;
 }
 
@@ -583,7 +584,7 @@ ul, ol {
 .flow-step-card:hover,
 .flow-step-card.active {
   background-color: var(--bg-obsidian-elevated);
-  border-color: var(--brand-teal-bright);
+  border-color: var(--brand-accent-bright);
 }
 
 .flow-step-left {
@@ -596,8 +597,8 @@ ul, ol {
   font-family: var(--font-mono);
   font-size: 0.75rem;
   font-weight: 700;
-  color: var(--brand-teal-bright);
-  background: hsla(177, 80%, 38%, 0.16);
+  color: var(--brand-accent-bright);
+  background: hsla(243, 84%, 68%, 0.16);
   padding: 0.28rem 0.5rem;
   border-radius: var(--radius-xs);
   flex-shrink: 0;
@@ -619,7 +620,7 @@ ul, ol {
 .flow-step-tag {
   font-size: 0.72rem;
   font-weight: 600;
-  color: var(--brand-teal-bright);
+  color: var(--brand-accent-bright);
   white-space: nowrap;
 }
 
@@ -634,7 +635,7 @@ ul, ol {
 .insight-box-title {
   font-size: 0.82rem;
   font-weight: 700;
-  color: var(--brand-teal-bright);
+  color: var(--brand-accent-bright);
   margin-bottom: 0.3rem;
 }
 
@@ -675,8 +676,8 @@ ul, ol {
 .cp-state-badge {
   font-size: 0.68rem;
   font-weight: 700;
-  color: var(--brand-teal-bright);
-  background: hsla(177, 80%, 38%, 0.18);
+  color: var(--brand-accent-bright);
+  background: hsla(243, 84%, 68%, 0.18);
   padding: 0.15rem 0.5rem;
   border-radius: 3px;
   white-space: nowrap;
@@ -714,11 +715,11 @@ ul, ol {
 .product-suite-card:hover {
   transform: translateY(-2px);
   box-shadow: var(--shadow-md);
-  border-color: var(--brand-teal);
+  border-color: var(--brand-accent);
 }
 
 .product-suite-card.featured-product {
-  border-color: var(--brand-teal);
+  border-color: var(--brand-accent);
   box-shadow: var(--shadow-md);
 }
 
@@ -755,8 +756,8 @@ ul, ol {
   letter-spacing: 0.08em;
   padding: 0.25rem 0.65rem;
   border-radius: var(--radius-xs);
-  background-color: var(--brand-teal-soft);
-  color: var(--brand-teal);
+  background-color: var(--brand-accent-soft);
+  color: var(--brand-accent);
 }
 
 .product-status-pill.planned {
@@ -789,7 +790,7 @@ ul, ol {
 
 .product-card-highlights li::before {
   content: "✓ ";
-  color: var(--brand-teal);
+  color: var(--brand-accent);
   font-weight: 700;
 }
 
@@ -809,7 +810,7 @@ ul, ol {
   gap: 0.4rem;
   font-size: 0.82rem;
   font-weight: 600;
-  color: var(--brand-teal);
+  color: var(--brand-accent);
   margin-bottom: 1.25rem;
 }
 
@@ -874,7 +875,7 @@ ul, ol {
 .pillar-index {
   font-size: 0.74rem;
   font-weight: 700;
-  color: var(--brand-teal);
+  color: var(--brand-accent);
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
@@ -936,9 +937,9 @@ ul, ol {
 
 .filter-btn:hover,
 .filter-btn.active {
-  background-color: var(--brand-teal);
+  background-color: var(--brand-accent);
   color: #ffffff;
-  border-color: var(--brand-teal);
+  border-color: var(--brand-accent);
 }
 
 .stack-workspace {
@@ -973,7 +974,7 @@ ul, ol {
 
 .stack-service-item.selected {
   background-color: var(--bg-obsidian-elevated);
-  border-color: var(--brand-teal-bright);
+  border-color: var(--brand-accent-bright);
 }
 
 .stack-item-head {
@@ -993,8 +994,8 @@ ul, ol {
 .stack-item-badge {
   font-size: 0.7rem;
   font-weight: 600;
-  color: var(--brand-teal-bright);
-  background: hsla(177, 80%, 38%, 0.16);
+  color: var(--brand-accent-bright);
+  background: hsla(243, 84%, 68%, 0.16);
   padding: 0.2rem 0.55rem;
   border-radius: var(--radius-xs);
 }
@@ -1034,7 +1035,7 @@ ul, ol {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--brand-teal-bright);
+  color: var(--brand-accent-bright);
   margin-bottom: 0.35rem;
 }
 
@@ -1071,7 +1072,7 @@ ul, ol {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--brand-teal-bright);
+  color: var(--brand-accent-bright);
   margin-bottom: 0.2rem;
 }
 
@@ -1082,8 +1083,8 @@ ul, ol {
 }
 
 .dossier-enterprise-note {
-  background-color: hsla(177, 80%, 31%, 0.12);
-  border: 1px solid hsla(177, 80%, 38%, 0.3);
+  background-color: hsla(243, 75%, 59%, 0.12);
+  border: 1px solid hsla(243, 84%, 68%, 0.3);
   border-radius: var(--radius-sm);
   padding: 1rem 1.15rem;
   font-size: 0.86rem;
@@ -1118,7 +1119,7 @@ ul, ol {
 }
 
 .solution-tab:hover {
-  border-color: var(--brand-teal);
+  border-color: var(--brand-accent);
   box-shadow: var(--shadow-xs);
 }
 
@@ -1134,7 +1135,7 @@ ul, ol {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--brand-teal);
+  color: var(--brand-accent);
 }
 
 .solution-tab-badge.roadmap-badge {
@@ -1142,7 +1143,7 @@ ul, ol {
 }
 
 .solution-tab.active .solution-tab-badge {
-  color: var(--brand-teal-bright);
+  color: var(--brand-accent-bright);
 }
 
 .solution-tab.active .solution-tab-badge.roadmap-badge {
@@ -1204,14 +1205,14 @@ ul, ol {
   letter-spacing: 0.08em;
   padding: 0.28rem 0.7rem;
   border-radius: var(--radius-xs);
-  background-color: var(--brand-teal-soft);
-  color: var(--brand-teal);
+  background-color: var(--brand-accent-soft);
+  color: var(--brand-accent);
   margin-bottom: 0.85rem;
 }
 
 .blueprint-status-tag.entity-tag {
-  background-color: var(--brand-teal-soft);
-  color: var(--brand-teal);
+  background-color: var(--brand-accent-soft);
+  color: var(--brand-accent);
 }
 
 .blueprint-status-tag.roadmap-tag {
@@ -1262,7 +1263,7 @@ ul, ol {
   font-family: var(--font-display);
   font-size: 1rem;
   font-weight: 800;
-  color: var(--brand-teal);
+  color: var(--brand-accent);
   white-space: nowrap;
 }
 
@@ -1304,7 +1305,7 @@ ul, ol {
 .stage-step-num {
   font-size: 0.7rem;
   font-weight: 700;
-  color: var(--brand-teal);
+  color: var(--brand-accent);
   text-transform: uppercase;
   letter-spacing: 0.06em;
   margin-bottom: 0.35rem;
@@ -1370,7 +1371,7 @@ ul, ol {
 
 .exec-question-card::before {
   content: "→";
-  color: var(--brand-teal-bright);
+  color: var(--brand-accent-bright);
   font-weight: 700;
   flex-shrink: 0;
 }
@@ -1398,7 +1399,7 @@ ul, ol {
 }
 
 .roadmap-phase.current-phase {
-  border-color: var(--brand-teal);
+  border-color: var(--brand-accent);
   box-shadow: var(--shadow-md);
 }
 
@@ -1426,8 +1427,8 @@ ul, ol {
 }
 
 .phase-status.active {
-  background-color: var(--brand-teal-soft);
-  color: var(--brand-teal);
+  background-color: var(--brand-accent-soft);
+  color: var(--brand-accent);
 }
 
 .phase-title {
@@ -1463,7 +1464,7 @@ ul, ol {
 
 .phase-deliverable-item::before {
   content: "✓";
-  color: var(--brand-teal);
+  color: var(--brand-accent);
   font-weight: 700;
 }
 
@@ -1490,7 +1491,7 @@ ul, ol {
 }
 
 .deployment-card.featured {
-  border-color: var(--brand-teal);
+  border-color: var(--brand-accent);
   box-shadow: var(--shadow-md);
 }
 
@@ -1499,7 +1500,7 @@ ul, ol {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--brand-teal);
+  color: var(--brand-accent);
   margin-bottom: 0.45rem;
 }
 
@@ -1529,7 +1530,7 @@ ul, ol {
 
 .deploy-highlights li::before {
   content: "• ";
-  color: var(--brand-teal);
+  color: var(--brand-accent);
   font-weight: 700;
 }
 
@@ -1614,7 +1615,7 @@ ul, ol {
 }
 
 .tier-box.enterprise-tier {
-  border-color: var(--brand-teal);
+  border-color: var(--brand-accent);
   background-color: var(--bg-subtle);
 }
 
@@ -1623,7 +1624,7 @@ ul, ol {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--brand-teal);
+  color: var(--brand-accent);
   margin-bottom: 0.35rem;
 }
 
@@ -1645,7 +1646,7 @@ ul, ol {
 
 .tier-list li::before {
   content: "✓ ";
-  color: var(--brand-teal);
+  color: var(--brand-accent);
   font-weight: 700;
 }
 
@@ -1713,7 +1714,7 @@ ul, ol {
 .form-select:focus,
 .form-textarea:focus {
   outline: none;
-  border-color: var(--brand-teal);
+  border-color: var(--brand-accent);
   background-color: var(--bg-surface);
 }
 
@@ -1722,8 +1723,8 @@ ul, ol {
   margin-top: 1rem;
   padding: 1rem;
   border-radius: var(--radius-sm);
-  background-color: var(--brand-teal-soft);
-  color: var(--brand-teal);
+  background-color: var(--brand-accent-soft);
+  color: var(--brand-accent);
   font-size: 0.88rem;
   font-weight: 500;
 }
@@ -1777,7 +1778,7 @@ ul, ol {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--brand-teal-bright);
+  color: var(--brand-accent-bright);
   margin-bottom: 1rem;
 }
 
@@ -1793,7 +1794,7 @@ ul, ol {
 }
 
 .footer-links a:hover {
-  color: var(--brand-teal-bright);
+  color: var(--brand-accent-bright);
 }
 
 .footer-bottom {
@@ -1925,13 +1926,13 @@ ul, ol {
   margin-top: 0.9rem;
   font-size: 0.85rem;
   font-weight: 700;
-  color: var(--brand-teal);
+  color: var(--brand-accent);
   text-decoration: none;
   transition: color 0.15s ease, transform 0.15s ease;
 }
 
 .phase-cta-link:hover {
-  color: var(--brand-teal-deep);
+  color: var(--brand-accent-deep);
   text-decoration: underline;
 }
 
