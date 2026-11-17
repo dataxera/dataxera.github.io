@@ -689,6 +689,135 @@ ul, ol {
 }
 
 /* ==========================================================================
+   Corporate Product Suite Grid (Extensible Multi-Product Architecture)
+   ========================================================================== */
+.suite-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2.5rem;
+}
+
+.product-suite-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.75rem;
+  transition: transform 0.2s var(--ease-out), box-shadow 0.2s var(--ease-out), border-color 0.2s var(--ease-out);
+}
+
+.product-suite-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--brand-teal);
+}
+
+.product-suite-card.featured-product {
+  border-color: var(--brand-teal);
+  box-shadow: var(--shadow-md);
+}
+
+.product-suite-card.upcoming-product {
+  background-color: var(--bg-canvas);
+  border-style: dashed;
+  box-shadow: none;
+}
+
+.product-suite-card.upcoming-product:hover {
+  transform: none;
+  box-shadow: none;
+  border-color: var(--border-light-strong);
+}
+
+.product-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.product-card-logo {
+  height: 38px;
+  width: auto;
+  display: block;
+}
+
+.product-status-pill {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-xs);
+  background-color: var(--brand-teal-soft);
+  color: var(--brand-teal);
+}
+
+.product-status-pill.planned {
+  background-color: var(--bg-subtle);
+  color: var(--text-muted);
+}
+
+.product-card-title {
+  font-family: var(--font-display);
+  font-size: 1.38rem;
+  font-weight: 700;
+  color: var(--brand-navy);
+  margin-bottom: 0.65rem;
+}
+
+.product-card-desc {
+  font-size: 0.96rem;
+  color: var(--text-secondary);
+  line-height: 1.62;
+}
+
+.product-card-highlights {
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  font-size: 0.86rem;
+  color: var(--text-secondary);
+}
+
+.product-card-highlights li::before {
+  content: "✓ ";
+  color: var(--brand-teal);
+  font-weight: 700;
+}
+
+.product-card-footer {
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.breadcrumb-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--brand-teal);
+  margin-bottom: 1.25rem;
+}
+
+.breadcrumb-link:hover {
+  color: var(--brand-navy);
+}
+
+/* ==========================================================================
    Section 01 — Executive Business Value Pillars
    ========================================================================== */
 .section-block {
@@ -1744,6 +1873,7 @@ ul, ol {
   }
 
   .pillars-table-grid,
+  .suite-grid,
   .stack-catalog-grid,
   .solutions-tabs-nav,
   .pipeline-stages-grid,

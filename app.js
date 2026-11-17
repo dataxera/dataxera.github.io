@@ -122,12 +122,12 @@ const CITADEL_STACK_DATA = {
 
 const SOLUTION_BLUEPRINTS = {
   disaster: {
-    tag: 'DESIGNED FOR PUBLIC SECTOR & INFRASTRUCTURE',
-    isEntity: false,
-    headline: 'Natural Disaster Analytics & Multi-Agency Early Warning',
-    narrative: 'Architected for disaster management and civil defense operations, Dataxera Citadel unifies live rainfall, river-level, seismic, and weather telemetry with critical infrastructure and population registries—enabling command centers to anticipate impact and coordinate response faster.',
+    tag: 'ENTITY 360 // PUBLIC SAFETY & RESILIENCE',
+    isEntity: true,
+    headline: 'Natural Disaster 360: Unified Hazard, Asset & Citizen Readiness',
+    narrative: 'Natural Disaster 360 applies the Entity 360 model to emergency management—unifying live rainfall, river-level, seismic, and weather telemetry with critical infrastructure, evacuation shelters, and vulnerable population registries into a single operational view.',
     outcomes: [
-      { metric: 'Real-Time', label: 'Continuous monitoring of hydrological, weather & seismic feeds' },
+      { metric: '360° View', label: 'Links live hazard telemetry directly to regional assets & communities' },
       { metric: 'Sub-Second', label: 'Interactive geospatial risk maps & catchment drills for commanders' },
       { metric: '100% Sovereign', label: 'Full national & agency control over sensitive infrastructure data' }
     ],
@@ -143,14 +143,14 @@ const SOLUTION_BLUEPRINTS = {
         detail: 'Routes threshold breaches and emergency alerts in real time without bottlenecks during peak storms.'
       },
       {
-        num: '03 // ENRICH',
-        engine: 'Automated Risk Scoring',
-        detail: 'Combines live readings with historical flood baselines and watershed terrain models.'
+        num: '03 // RESOLVE',
+        engine: 'Spatial Entity Linking',
+        detail: 'Connects watersheds, districts, hospitals, shelters, and population registries into a unified entity model.'
       },
       {
         num: '04 // UNIFY',
         engine: 'Cross-Agency Analytics',
-        detail: 'Joins hazard zones with hospital capacities, evacuation shelters, and vulnerable population registries.'
+        detail: 'Assesses real-time exposure by joining hazard zones with shelter capacity and critical infrastructure.'
       },
       {
         num: '05 // ACT',
@@ -159,9 +159,9 @@ const SOLUTION_BLUEPRINTS = {
       }
     ],
     questionsTitle: 'Decisions Enabled for Crisis & Operations Leaders',
-    questionsDesc: 'Commanders and agency directors get immediate, unified answers without waiting for manual spreadsheet consolidation across ministries.',
+    questionsDesc: 'Commanders and agency directors get a complete 360° view of affected regions, assets, and communities without manual spreadsheet consolidation.',
     questions: [
-      'Which river basins have crossed 90% critical flood thresholds in the last 15 minutes?',
+      'Which river basins and districts have crossed 90% critical flood thresholds in the last 15 minutes?',
       'How many hospitals, schools, and residents sit inside the projected 6-hour inundation zone?',
       'Which evacuation shelters have remaining capacity and unobstructed road access?',
       'How does current catchment rainfall compare against historical 10-year severe flood events?'

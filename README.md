@@ -1,29 +1,15 @@
 # Dataxera Sdn Bhd — Corporate Website (`dataxera.github.io`)
 
-Official corporate website for **Dataxera Sdn Bhd**, showcasing **[Dataxera Citadel](https://github.com/dataxera/citadel)** — the 100% open-source (`GNU AGPLv3`) Kubernetes-native Data & AI Orchestration Platform.
+Official corporate website for **Dataxera Sdn Bhd** and the **Dataxera Product Suite**, hosted on GitHub Pages.
 
-## Highlights Covered
+## Site Structure
 
-- **Dataxera Citadel Control Plane**: Operator-driven Kubernetes orchestration (`v1.28+`, `k3s`, `MetalLB`, `EKS`, `GKE`, `AKS`), end-to-end TLS (`cert-manager` + `Envoy Gateway`), topological dependency protection (`Dependency Tracker`), and centralized SSO/LDAP (`Dex IdP`).
-- **8-Engine Managed Data & OLAP Stack (`citadel-0.1.0`)**:
-  - **Apache NiFi (`2.9.0`)** — Dataflow ingestion, routing & provenance
-  - **Apache Kafka (`4.0.0`)** — Distributed KRaft event streaming backbone
-  - **Apache Airflow (`3.2.2`)** — DAG orchestration with Git-Sync (`v4.4.2`)
-  - **Trino (`482`)** — Distributed federated SQL query engine
-  - **Apache Doris (`2.1.8`)** — Real-time MPP analytical data warehouse
-  - **Apache Superset (`6.1.0`)** — Enterprise BI, geospatial analytics & SQL Lab
-  - **Hive Metastore (`4.2.0`)** — Centralized lakehouse schema catalog for S3
-  - **PostgreSQL (`18.4`)** — High-availability CloudNativePG clusters with PgBouncer
-- **Field-Tested & Enterprise Solutions**:
-  - **Natural Disaster Analytics & Early Warning** (Field-tested reference workload)
-  - **Customer 360 Intelligence** (Entity 360)
-  - **HR 360 & Workforce Analytics** (Entity 360)
-  - **Infrastructure & Asset 360** (Entity 360)
+- **`index.html`** — Corporate Home & Product Suite Hub for **Dataxera Sdn Bhd**, featuring the product suite directory, corporate value pillars, **Enterprise Entity 360** solutions (**Natural Disaster 360**, **Customer 360**, **HR 360**, **Asset & Vendor 360**), and **Community Edition / Enterprise Edition** (`8x5` & `16x5` SLA).
+- **`products/citadel/index.html`** — Dedicated product page for **[Dataxera Citadel](https://github.com/dataxera/citadel)**, detailing the 8 integrated open-source engines, Entity 360 solutions, Phase 1–4 roadmap, deployment flexibility, and Enterprise Edition support.
+- **`index.css`** & **`app.js`** — Shared design system (`#141c29` Slate-Navy & `#108d87` Teal) and interactive logic shared across the corporate hub and all product pages.
+- **`assets/`** — Official Dataxera and Dataxera Citadel logo assets.
 
-## Local Preview
+## Adding a New Product Page
 
-Serve the static files from the repository root:
-
-```bash
-python3 -m http.server 8000
-```
+1. Create a new directory under `products/<product-slug>/index.html` using `products/citadel/index.html` as a template (referencing `../../index.css`, `../../app.js`, and `../../assets/`).
+2. Add a `.product-suite-card` entry in the `#products` `.suite-grid` section of `index.html` linking to `products/<product-slug>/index.html`.
