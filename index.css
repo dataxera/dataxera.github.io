@@ -1917,3 +1917,21 @@ ul, ol {
     padding: 1.5rem;
   }
 }
+
+.phase-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.9rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--brand-teal);
+  text-decoration: none;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.phase-cta-link:hover {
+  color: var(--brand-teal-deep);
+  text-decoration: underline;
+}
+
