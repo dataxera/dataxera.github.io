@@ -1137,8 +1137,24 @@ ul, ol {
   color: var(--brand-teal);
 }
 
+.solution-tab-badge.roadmap-badge {
+  color: var(--text-muted);
+}
+
 .solution-tab.active .solution-tab-badge {
   color: var(--brand-teal-bright);
+}
+
+.solution-tab.active .solution-tab-badge.roadmap-badge {
+  color: hsla(190, 25%, 96%, 0.72);
+}
+
+.solution-tab.roadmap-tab {
+  background-color: var(--bg-canvas);
+}
+
+.solution-tab.roadmap-tab.active {
+  background-color: var(--brand-navy);
 }
 
 .solution-tab-title {
@@ -1194,8 +1210,13 @@ ul, ol {
 }
 
 .blueprint-status-tag.entity-tag {
+  background-color: var(--brand-teal-soft);
+  color: var(--brand-teal);
+}
+
+.blueprint-status-tag.roadmap-tag {
   background-color: var(--bg-subtle);
-  color: var(--brand-navy);
+  color: var(--text-muted);
 }
 
 .blueprint-headline {

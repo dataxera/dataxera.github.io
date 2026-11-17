@@ -122,8 +122,8 @@ const CITADEL_STACK_DATA = {
 
 const SOLUTION_BLUEPRINTS = {
   disaster: {
-    tag: 'ENTITY 360 // MONITORING & ALERTING',
-    isEntity: true,
+    tag: 'ACTIVE ENTITY 360 FOCUS // ONGOING IMPLEMENTATION',
+    isRoadmap: false,
     headline: 'Monitoring & Alert 360: Real-Time Situational Intelligence & Early Warning',
     narrative: 'Monitoring & Alert 360 unifies live sensor telemetry, threshold alerts, and regional asset registries into a single operational command view—built for mission-critical scenarios such as natural disaster early warning (flood, weather, and seismic monitoring), utility grid supervision, and environmental compliance.',
     outcomes: [
@@ -168,10 +168,10 @@ const SOLUTION_BLUEPRINTS = {
     ]
   },
   customer360: {
-    tag: 'ENTITY 360 BLUEPRINT // FINANCIAL, TELECOM & RETAIL',
-    isEntity: true,
+    tag: 'FUTURE ROADMAP // PLANNED ENTITY 360 EXTENSION',
+    isRoadmap: true,
     headline: 'Customer 360: Unified Customer Intelligence & Retention',
-    narrative: 'Most enterprises store customer data across separate billing, CRM, mobile app, and support systems. Dataxera Citadel unifies these fragments into a single, real-time Golden Customer Record—unlocking personalized service, accurate lifetime value, and proactive churn prevention.',
+    narrative: 'Planned on our Entity 360 roadmap, Customer 360 will unify fragmented billing, CRM, mobile app, and support records into a single Golden Customer Record—unlocking personalized service, accurate lifetime value, and proactive churn prevention.',
     outcomes: [
       { metric: 'Single View', label: 'Unified customer profile across 15+ operational & digital channels' },
       { metric: 'Instant', label: 'Real-time cohort segmentation & churn risk detection' },
@@ -214,10 +214,10 @@ const SOLUTION_BLUEPRINTS = {
     ]
   },
   hr360: {
-    tag: 'ENTITY 360 BLUEPRINT // ENTERPRISE WORKFORCE & TALENT',
-    isEntity: true,
+    tag: 'FUTURE ROADMAP // PLANNED ENTITY 360 EXTENSION',
+    isRoadmap: true,
     headline: 'HR 360: Workforce Capacity, Skills & Retention Intelligence',
-    narrative: 'Unifies disconnected HRIS records, payroll systems, corporate directories, training certifications, and project utilization into a governed Workforce 360 foundation—helping CHROs and business unit leaders align talent with strategic growth.',
+    narrative: 'Planned on our Entity 360 roadmap, HR 360 will unify disconnected HRIS records, payroll systems, corporate directories, training certifications, and project utilization into a governed Workforce 360 foundation.',
     outcomes: [
       { metric: 'Enterprise SSO', label: 'Integrates directly with corporate LDAP & Active Directory' },
       { metric: '360° History', label: 'Complete visibility across hiring, skills, mobility & attrition' },
@@ -260,10 +260,10 @@ const SOLUTION_BLUEPRINTS = {
     ]
   },
   asset360: {
-    tag: 'ENTITY 360 BLUEPRINT // ENERGY, LOGISTICS & MANUFACTURING',
-    isEntity: true,
+    tag: 'FUTURE ROADMAP // PLANNED ENTITY 360 EXTENSION',
+    isRoadmap: true,
     headline: 'Asset & Vendor 360: Infrastructure Health & Supply Chain',
-    narrative: 'Creates a unified operational view of physical equipment, facility networks, spare-parts inventories, and multi-tier vendor performance—reducing unplanned downtime and optimizing procurement spend.',
+    narrative: 'Planned on our Entity 360 roadmap, Asset & Vendor 360 will create a unified operational view of physical equipment, facility networks, spare-parts inventories, and multi-tier vendor performance.',
     outcomes: [
       { metric: 'Proactive', label: 'Early anomaly detection before critical equipment failure occurs' },
       { metric: 'Unified', label: 'Links live sensor health directly to ERP spare-parts & vendors' },
@@ -462,7 +462,7 @@ function initSolutionBlueprints() {
 
     const tagEl = document.getElementById('bp-tag');
     tagEl.textContent = bp.tag;
-    tagEl.className = `blueprint-status-tag ${bp.isEntity ? 'entity-tag' : ''}`;
+    tagEl.className = `blueprint-status-tag ${bp.isRoadmap ? 'roadmap-tag' : 'entity-tag'}`;
 
     document.getElementById('bp-headline').textContent = bp.headline;
     document.getElementById('bp-narrative').textContent = bp.narrative;
