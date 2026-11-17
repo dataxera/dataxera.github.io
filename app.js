@@ -122,10 +122,10 @@ const CITADEL_STACK_DATA = {
 
 const SOLUTION_BLUEPRINTS = {
   disaster: {
-    tag: 'FIELD-TESTED WORKLOAD // PUBLIC SECTOR & INFRASTRUCTURE',
+    tag: 'DESIGNED FOR PUBLIC SECTOR & INFRASTRUCTURE',
     isEntity: false,
     headline: 'Natural Disaster Analytics & Multi-Agency Early Warning',
-    narrative: 'Validated in real-world disaster management deployments, Dataxera Citadel unifies live rainfall, river-level, seismic, and weather telemetry with critical infrastructure and population registries—empowering command centers to anticipate impact and coordinate response faster.',
+    narrative: 'Architected for disaster management and civil defense operations, Dataxera Citadel unifies live rainfall, river-level, seismic, and weather telemetry with critical infrastructure and population registries—enabling command centers to anticipate impact and coordinate response faster.',
     outcomes: [
       { metric: 'Real-Time', label: 'Continuous monitoring of hydrological, weather & seismic feeds' },
       { metric: 'Sub-Second', label: 'Interactive geospatial risk maps & catchment drills for commanders' },
