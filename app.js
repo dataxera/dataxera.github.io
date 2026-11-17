@@ -17,7 +17,7 @@ const HERO_STAGE_INSIGHTS = {
   },
   decide: {
     title: '04 // Executive Dashboards & Maps — Powered by Apache Superset',
-    desc: 'Delivers interactive command-center dashboards, geospatial heatmaps, and self-service reporting with corporate single sign-on—without per-seat BI licensing fees.'
+    desc: 'Delivers interactive command-center dashboards, geospatial heatmaps, and self-service reporting with corporate LDAP / Active Directory authentication—without per-seat BI licensing fees.'
   }
 };
 
@@ -56,7 +56,7 @@ const CITADEL_STACK_DATA = {
     description: 'Apache Airflow ensures that your data cleaning, enrichment, and reporting pipelines run on schedule, in the exact right order, with automatic retries and instant alerts if an upstream source changes.',
     businessValue: 'Replaces manual spreadsheet preparation and fragile cron jobs with auditable enterprise automation.',
     idealFor: 'Daily executive KPIs, regulatory compliance reporting, and Entity 360 identity matching.',
-    governanceNote: 'Integrated with corporate Git version control and enterprise SSO access policies.'
+    governanceNote: 'Integrated with corporate Git version control and LDAP / Active Directory access policies.'
   },
   trino: {
     id: 'trino',
@@ -92,7 +92,7 @@ const CITADEL_STACK_DATA = {
     description: 'Apache Superset replaces costly proprietary BI licenses with a rich, intuitive visual workspace. Leaders get interactive KPIs, regional risk maps, and drill-down reports accessible from any browser.',
     businessValue: 'Eliminates escalating per-seat BI software fees as you roll out analytics across your entire organization.',
     idealFor: 'Executive scorecards, geospatial flood & infrastructure maps, and department self-service reporting.',
-    governanceNote: 'Pre-configured with corporate Single Sign-On (SSO) and role-based dashboard permissions.'
+    governanceNote: 'Pre-configured with LDAP / Active Directory authentication and role-based dashboard permissions.'
   },
   hive_metastore: {
     id: 'hive_metastore',
@@ -219,7 +219,7 @@ const SOLUTION_BLUEPRINTS = {
     headline: 'HR 360: Workforce Capacity, Skills & Retention Intelligence',
     narrative: 'Planned on our Entity 360 roadmap, HR 360 will unify disconnected HRIS records, payroll systems, corporate directories, training certifications, and project utilization into a governed Workforce 360 foundation.',
     outcomes: [
-      { metric: 'Enterprise SSO', label: 'Integrates directly with corporate LDAP & Active Directory' },
+      { metric: 'LDAP / AD', label: 'Integrates directly with corporate LDAP & Active Directory' },
       { metric: '360° History', label: 'Complete visibility across hiring, skills, mobility & attrition' },
       { metric: 'Automated', label: 'Eliminates manual monthly headcount & compliance reporting' }
     ],
