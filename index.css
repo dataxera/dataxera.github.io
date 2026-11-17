@@ -1,0 +1,1932 @@
+/* ==========================================================================
+   Dataxera Sdn Bhd — Corporate & Dataxera Citadel Platform Design System
+   Brand Palette Derived from Official Dataxera Logo Assets:
+   - Primary Slate-Navy: #141c29 (rgb(20, 28, 41) / hsl(217, 34%, 12%))
+   - Primary Brand Teal: #108d87 (rgb(16, 141, 135) / hsl(177, 80%, 31%))
+   ========================================================================== */
+
+:root {
+  /* Light Editorial Surfaces */
+  --bg-canvas: hsl(192, 24%, 97.5%);
+  --bg-surface: hsl(0, 0%, 100%);
+  --bg-subtle: hsl(190, 22%, 94.5%);
+  --bg-elevated: hsl(190, 20%, 91.5%);
+
+  /* Dark Architectural Surfaces (Anchored to #141c29 Brand Slate-Navy) */
+  --bg-obsidian: hsl(217, 38%, 8%);
+  --bg-obsidian-surface: #141c29; /* Exact Dataxera Logo Dark Slate-Navy */
+  --bg-obsidian-elevated: hsl(217, 30%, 16%);
+  --bg-obsidian-subtle: hsl(217, 26%, 20%);
+
+  /* Typography Colors */
+  --text-primary: #141c29; /* Exact Dataxera Logo Dark Slate-Navy */
+  --text-secondary: hsl(217, 22%, 32%);
+  --text-muted: hsl(217, 15%, 46%);
+  --text-on-dark: hsl(190, 25%, 96%);
+  --text-on-dark-secondary: hsl(210, 18%, 74%);
+  --text-on-dark-muted: hsl(214, 14%, 56%);
+
+  /* Official Dataxera Brand Palette (#108d87 Teal & #141c29 Slate-Navy) */
+  --brand-navy: #141c29;
+  --brand-teal: #108d87; /* Exact Dataxera Logo Teal */
+  --brand-teal-hover: #0c706b;
+  --brand-teal-bright: #20c4bc; /* High-contrast Teal for Dark Surfaces */
+  --brand-teal-soft: hsl(177, 48%, 92.5%);
+  --brand-teal-subtle: hsla(177, 80%, 31%, 0.1);
+
+  /* Complementary Semantic Accents */
+  --accent-emerald: #108d87;
+  --accent-emerald-bright: #20c4bc;
+  --accent-emerald-soft: hsl(177, 48%, 92.5%);
+  --accent-amber: hsl(34, 90%, 44%);
+
+  /* Structural Hairline Borders (Neutral — no glowing colored borders) */
+  --border-light: hsl(205, 22%, 87%);
+  --border-light-strong: hsl(205, 20%, 76%);
+  --border-dark: hsla(190, 25%, 95%, 0.09);
+  --border-dark-strong: hsla(190, 25%, 95%, 0.17);
+
+  /* Typography Families */
+  --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace;
+
+  /* Spacing & Layout */
+  --container-max: 1280px;
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+
+  /* Depth & Elevation */
+  --shadow-xs: 0 1px 2px rgba(20, 28, 41, 0.05);
+  --shadow-sm: 0 2px 6px rgba(20, 28, 41, 0.06), 0 1px 2px rgba(20, 28, 41, 0.04);
+  --shadow-md: 0 10px 28px -6px rgba(20, 28, 41, 0.09), 0 4px 10px -2px rgba(20, 28, 41, 0.04);
+  --shadow-lg: 0 22px 48px -12px rgba(20, 28, 41, 0.16), 0 6px 16px -4px rgba(20, 28, 41, 0.07);
+
+  /* Transitions */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-canvas);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.18s var(--ease-out);
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+code, pre {
+  font-family: var(--font-mono);
+}
+
+/* Layout Containers */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Editorial Section Header Architecture */
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--brand-teal);
+  margin-bottom: 1rem;
+}
+
+.section-kicker::before {
+  content: "";
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background-color: currentColor;
+}
+
+.section-dark .section-kicker {
+  color: var(--brand-teal-bright);
+}
+
+.section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.85rem, 3.2vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.032em;
+  line-height: 1.15;
+  color: var(--text-primary);
+  margin-bottom: 1.1rem;
+}
+
+.section-dark .section-title {
+  color: var(--text-on-dark);
+}
+
+.section-lead {
+  font-size: 1.125rem;
+  line-height: 1.68;
+  color: var(--text-secondary);
+  max-width: 68ch;
+}
+
+.section-dark .section-lead {
+  color: var(--text-on-dark-secondary);
+}
+
+/* Top Utility Announcement Bar */
+.utility-bar {
+  background-color: var(--brand-navy);
+  color: var(--text-on-dark-secondary);
+  border-bottom: 1px solid var(--border-dark);
+  font-size: 0.8125rem;
+  padding: 0.55rem 0;
+}
+
+.utility-bar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.utility-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.release-tag {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: var(--brand-teal);
+  padding: 0.16rem 0.55rem;
+  border-radius: var(--radius-xs);
+  letter-spacing: 0.04em;
+}
+
+.utility-bar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.utility-bar-right a:hover {
+  color: var(--brand-teal-bright);
+}
+
+/* Primary Navigation Header */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: hsla(0, 0%, 100%, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-light);
+  transition: box-shadow 0.2s var(--ease-out), background-color 0.2s var(--ease-out);
+}
+
+.site-header.scrolled {
+  background-color: hsla(0, 0%, 100%, 0.98);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 4.75rem;
+  gap: 1.5rem;
+}
+
+.brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.brand-horizontal-img {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+
+.brand-sdn-bhd-tag {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--brand-teal);
+  background-color: var(--brand-teal-soft);
+  padding: 0.2rem 0.45rem;
+  border-radius: var(--radius-xs);
+  line-height: 1;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-link {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 0.35rem 0;
+  position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--brand-navy);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--brand-teal);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.22s var(--ease-out);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.mobile-menu-toggle {
+  display: none;
+  padding: 0.5rem;
+  color: var(--text-primary);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius-sm);
+  transition: all 0.18s var(--ease-out);
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background-color: var(--brand-teal);
+  color: #ffffff;
+  border: 1px solid var(--brand-teal);
+  box-shadow: var(--shadow-xs);
+}
+
+.btn-primary:hover {
+  background-color: var(--brand-teal-hover);
+  border-color: var(--brand-teal-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-navy {
+  background-color: var(--brand-navy);
+  color: #ffffff;
+  border: 1px solid var(--brand-navy);
+}
+
+.btn-navy:hover {
+  background-color: var(--brand-teal);
+  border-color: var(--brand-teal);
+}
+
+.btn-secondary {
+  background-color: var(--bg-surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border-light-strong);
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-subtle);
+  border-color: var(--brand-teal);
+  color: var(--brand-teal);
+}
+
+.btn-dark-surface {
+  background-color: var(--bg-obsidian-elevated);
+  color: var(--text-on-dark);
+  border: 1px solid var(--border-dark-strong);
+}
+
+.btn-dark-surface:hover {
+  background-color: var(--brand-teal);
+  border-color: var(--brand-teal);
+  color: #ffffff;
+}
+
+.btn-lg {
+  font-size: 0.9375rem;
+  padding: 0.95rem 1.5rem;
+}
+
+/* ==========================================================================
+   Hero Section — Featuring Official Dataxera Citadel Product Lockup
+   ========================================================================== */
+.hero-section {
+  padding: 4.25rem 0 5rem;
+  border-bottom: 1px solid var(--border-light);
+  background: linear-gradient(180deg, var(--bg-surface) 0%, var(--bg-canvas) 100%);
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: 1.05fr 1.15fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.hero-product-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.1rem;
+  padding: 0.75rem 1.15rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-xs);
+  margin-bottom: 1.5rem;
+}
+
+.hero-citadel-logo {
+  height: 46px;
+  width: auto;
+  display: block;
+}
+
+.hero-lockup-divider {
+  width: 1px;
+  height: 30px;
+  background-color: var(--border-light);
+}
+
+.hero-lockup-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.hero-lockup-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--brand-teal);
+}
+
+.hero-lockup-sub {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.3rem, 4.1vw, 3.45rem);
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 1.08;
+  color: var(--brand-navy);
+  margin-bottom: 1.35rem;
+}
+
+.hero-description {
+  font-size: 1.125rem;
+  line-height: 1.68;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  max-width: 58ch;
+}
+
+.hero-cta-group {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  flex-wrap: wrap;
+  margin-bottom: 2.5rem;
+}
+
+.hero-metrics-strip {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.hero-metric-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.hero-metric-value {
+  font-family: var(--font-mono);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--brand-navy);
+  letter-spacing: -0.02em;
+}
+
+.hero-metric-label {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  line-height: 1.35;
+}
+
+/* Interactive Architectural Stage in Hero (#141c29 & #108d87) */
+.hero-stage {
+  background-color: var(--bg-obsidian);
+  color: var(--text-on-dark);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-dark-strong);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.stage-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.85rem 1.25rem;
+  background-color: var(--bg-obsidian-surface);
+  border-bottom: 1px solid var(--border-dark);
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.stage-context {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-on-dark-secondary);
+}
+
+.stage-context-icon {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  background-color: #ffffff;
+  padding: 2px;
+}
+
+.stage-mode-tabs {
+  display: flex;
+  background-color: var(--bg-obsidian);
+  padding: 0.2rem;
+  border-radius: var(--radius-xs);
+  border: 1px solid var(--border-dark);
+}
+
+.stage-tab-btn {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-on-dark-muted);
+  padding: 0.35rem 0.75rem;
+  border-radius: 3px;
+  transition: all 0.15s ease;
+}
+
+.stage-tab-btn.active {
+  background-color: var(--brand-teal);
+  color: #ffffff;
+}
+
+.stage-body {
+  padding: 1.35rem;
+}
+
+/* Topology Flow Interactive View */
+.topology-layers {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.topology-layer {
+  background-color: var(--bg-obsidian-surface);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-md);
+  padding: 0.9rem 1rem;
+}
+
+.topology-layer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.65rem;
+}
+
+.topology-layer-name {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-on-dark-muted);
+}
+
+.topology-layer-spec {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--brand-teal-bright);
+}
+
+.topology-nodes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+  gap: 0.6rem;
+}
+
+.topology-node {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  padding: 0.65rem 0.75rem;
+  border-radius: var(--radius-sm);
+  background-color: var(--bg-obsidian-elevated);
+  border: 1px solid var(--border-dark);
+  transition: all 0.16s var(--ease-out);
+}
+
+.topology-node:hover,
+.topology-node.active {
+  background-color: var(--bg-obsidian-subtle);
+  border-color: var(--brand-teal-bright);
+}
+
+.node-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0.25rem;
+}
+
+.node-title {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-on-dark);
+}
+
+.node-ver {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--brand-teal-bright);
+  background: hsla(177, 80%, 38%, 0.18);
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+}
+
+.node-role {
+  font-size: 0.72rem;
+  color: var(--text-on-dark-muted);
+  line-height: 1.3;
+}
+
+.topology-inspector-bar {
+  margin-top: 0.9rem;
+  padding: 0.85rem 1rem;
+  background-color: var(--bg-obsidian-surface);
+  border: 1px solid var(--border-dark-strong);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.inspector-bar-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.inspector-service-title {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--brand-teal-bright);
+}
+
+.inspector-endpoint {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-on-dark);
+}
+
+.inspector-desc {
+  font-size: 0.78rem;
+  color: var(--text-on-dark-secondary);
+}
+
+/* Control Plane View inside Hero Stage */
+.control-plane-view {
+  display: none;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.control-plane-view.active {
+  display: flex;
+}
+
+.topology-view {
+  display: none;
+}
+
+.topology-view.active {
+  display: block;
+}
+
+.cp-header-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background-color: var(--bg-obsidian-surface);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+}
+
+.cp-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.65rem;
+}
+
+.cp-card {
+  background-color: var(--bg-obsidian-surface);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-sm);
+  padding: 0.75rem 0.9rem;
+}
+
+.cp-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.4rem;
+}
+
+.cp-service-name {
+  font-weight: 700;
+  font-size: 0.82rem;
+  color: var(--text-on-dark);
+}
+
+.cp-state-badge {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--brand-teal-bright);
+  background: hsla(177, 80%, 38%, 0.18);
+  padding: 0.12rem 0.45rem;
+  border-radius: 3px;
+}
+
+.cp-meta {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--text-on-dark-muted);
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+/* ==========================================================================
+   Section 01 — Platform Value Proposition & Control Plane Capabilities
+   ========================================================================== */
+.section-block {
+  padding: 5.5rem 0;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.section-dark {
+  background-color: var(--bg-obsidian);
+  color: var(--text-on-dark);
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.section-subtle {
+  background-color: var(--bg-subtle);
+}
+
+.section-header-split {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 3rem;
+  align-items: end;
+  margin-bottom: 3.5rem;
+}
+
+.pillars-table-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 1px solid var(--border-light);
+  background-color: var(--bg-surface);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.pillar-cell {
+  padding: 2.25rem 2rem;
+  border-right: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.pillar-cell:nth-child(3n) {
+  border-right: none;
+}
+
+.pillar-cell:nth-last-child(-n+3) {
+  border-bottom: none;
+}
+
+.pillar-index {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--brand-teal);
+  letter-spacing: 0.08em;
+}
+
+.pillar-title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--brand-navy);
+  margin: 0.5rem 0 0.65rem;
+}
+
+.pillar-body {
+  font-size: 0.925rem;
+  color: var(--text-secondary);
+  line-height: 1.62;
+}
+
+.pillar-spec-foot {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--text-muted);
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-light);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ==========================================================================
+   Section 02 — Interactive 8-Engine Managed Stack & Kubernetes Operators
+   ========================================================================== */
+.stack-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.filter-buttons {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--text-on-dark-secondary);
+  background-color: var(--bg-obsidian-surface);
+  border: 1px solid var(--border-dark);
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius-xs);
+  transition: all 0.16s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background-color: var(--brand-teal);
+  color: #ffffff;
+  border-color: var(--brand-teal);
+}
+
+.stack-workspace {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.stack-catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.9rem;
+}
+
+.stack-service-item {
+  text-align: left;
+  background-color: var(--bg-obsidian-surface);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  transition: all 0.18s var(--ease-out);
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.stack-service-item:hover {
+  background-color: var(--bg-obsidian-elevated);
+  border-color: var(--border-dark-strong);
+}
+
+.stack-service-item.selected {
+  background-color: var(--bg-obsidian-elevated);
+  border-color: var(--brand-teal-bright);
+}
+
+.stack-item-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.stack-item-name {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-on-dark);
+}
+
+.stack-item-version {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--brand-teal-bright);
+  background: hsla(177, 80%, 38%, 0.16);
+  padding: 0.18rem 0.5rem;
+  border-radius: var(--radius-xs);
+}
+
+.stack-item-category {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-on-dark-muted);
+}
+
+.stack-item-summary {
+  font-size: 0.85rem;
+  color: var(--text-on-dark-secondary);
+  line-height: 1.5;
+}
+
+/* Right-hand Stack Technical Dossier Panel */
+.stack-dossier {
+  background-color: var(--bg-obsidian-surface);
+  border: 1px solid var(--border-dark-strong);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  position: sticky;
+  top: 6rem;
+}
+
+.dossier-header {
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-dark);
+  margin-bottom: 1.25rem;
+}
+
+.dossier-kicker {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--brand-teal-bright);
+  margin-bottom: 0.35rem;
+}
+
+.dossier-title {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-on-dark);
+  margin-bottom: 0.45rem;
+}
+
+.dossier-desc {
+  font-size: 0.9rem;
+  color: var(--text-on-dark-secondary);
+  line-height: 1.6;
+}
+
+.dossier-specs-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.dossier-spec-box {
+  background-color: var(--bg-obsidian);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-xs);
+  padding: 0.65rem 0.85rem;
+}
+
+.spec-box-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-on-dark-muted);
+  margin-bottom: 0.2rem;
+}
+
+.spec-box-value {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-on-dark);
+  word-break: break-all;
+}
+
+.dossier-code-block {
+  background-color: var(--bg-obsidian);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.dossier-code-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--text-on-dark-muted);
+  margin-bottom: 0.5rem;
+}
+
+.dossier-code-pre {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  line-height: 1.55;
+  color: var(--text-on-dark-secondary);
+}
+
+/* Core K8s Operator Strip */
+.operator-foundation-strip {
+  margin-top: 3rem;
+  padding-top: 2.25rem;
+  border-top: 1px solid var(--border-dark);
+}
+
+.operator-strip-title {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-on-dark-muted);
+  margin-bottom: 1rem;
+}
+
+.operator-badges-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(165px, 1fr));
+  gap: 0.75rem;
+}
+
+.operator-item {
+  background-color: var(--bg-obsidian-surface);
+  border: 1px solid var(--border-dark);
+  border-radius: var(--radius-xs);
+  padding: 0.75rem 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.operator-name {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-on-dark);
+}
+
+.operator-meta {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: var(--brand-teal-bright);
+}
+
+/* ==========================================================================
+   Section 03 — Proven Solutions: Natural Disaster Analytics & Entity 360
+   ========================================================================== */
+.solutions-tabs-nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.75rem;
+  margin-bottom: 2.25rem;
+}
+
+.solution-tab {
+  text-align: left;
+  padding: 1.25rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  transition: all 0.18s var(--ease-out);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.solution-tab:hover {
+  border-color: var(--brand-teal);
+  box-shadow: var(--shadow-xs);
+}
+
+.solution-tab.active {
+  background-color: var(--brand-navy);
+  border-color: var(--brand-navy);
+  color: #ffffff;
+  box-shadow: var(--shadow-md);
+}
+
+.solution-tab-badge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--brand-teal);
+}
+
+.solution-tab.active .solution-tab-badge {
+  color: var(--brand-teal-bright);
+}
+
+.solution-tab-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--brand-navy);
+}
+
+.solution-tab.active .solution-tab-title {
+  color: #ffffff;
+}
+
+.solution-tab-sub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.solution-tab.active .solution-tab-sub {
+  color: hsla(190, 25%, 96%, 0.78);
+}
+
+/* Solution Blueprint Showcase Panel */
+.blueprint-panel {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+.blueprint-top {
+  padding: 2.25rem 2.5rem;
+  border-bottom: 1px solid var(--border-light);
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.blueprint-status-tag {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-xs);
+  background-color: var(--brand-teal-soft);
+  color: var(--brand-teal);
+  margin-bottom: 0.85rem;
+}
+
+.blueprint-status-tag.entity-tag {
+  background-color: var(--bg-subtle);
+  color: var(--brand-navy);
+}
+
+.blueprint-headline {
+  font-family: var(--font-display);
+  font-size: 1.75rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: var(--brand-navy);
+  margin-bottom: 0.75rem;
+}
+
+.blueprint-narrative {
+  font-size: 0.975rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.blueprint-outcomes {
+  background-color: var(--bg-subtle);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.35rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.outcome-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.outcome-row:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.outcome-metric {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--brand-teal);
+}
+
+.outcome-label {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  text-align: right;
+}
+
+/* 5-Stage Reference Pipeline inside Blueprint */
+.blueprint-pipeline-section {
+  padding: 2rem 2.5rem;
+  background-color: var(--bg-canvas);
+  border-bottom: 1px solid var(--border-light);
+}
+
+.pipeline-section-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  margin-bottom: 1.15rem;
+}
+
+.pipeline-stages-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.85rem;
+}
+
+.pipeline-stage-step {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 1.1rem;
+  position: relative;
+}
+
+.stage-step-num {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--brand-teal);
+  margin-bottom: 0.35rem;
+}
+
+.stage-step-engine {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--brand-navy);
+  margin-bottom: 0.35rem;
+}
+
+.stage-step-detail {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.48;
+}
+
+/* Blueprint Code / Query Artifact Footer */
+.blueprint-code-footer {
+  padding: 1.5rem 2.5rem;
+  background-color: var(--brand-navy);
+  color: var(--text-on-dark);
+  display: grid;
+  grid-template-columns: 0.35fr 0.65fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.code-footer-info h4 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.code-footer-info p {
+  font-size: 0.82rem;
+  color: var(--text-on-dark-secondary);
+  line-height: 1.55;
+}
+
+.code-footer-snippet {
+  background-color: var(--bg-obsidian);
+  border: 1px solid var(--border-dark-strong);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  overflow-x: auto;
+}
+
+.code-footer-snippet pre {
+  font-size: 0.76rem;
+  line-height: 1.55;
+  color: var(--brand-teal-bright);
+}
+
+/* ==========================================================================
+   Section 04 — Product Roadmap & AI Architecture (v0.1 to v0.4)
+   ========================================================================== */
+.roadmap-timeline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+
+.roadmap-phase {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+  box-shadow: var(--shadow-xs);
+}
+
+.roadmap-phase.current-phase {
+  border-color: var(--brand-teal);
+  box-shadow: var(--shadow-md);
+}
+
+.phase-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.85rem;
+}
+
+.phase-version {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--brand-navy);
+}
+
+.phase-status {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-xs);
+  background-color: var(--bg-subtle);
+  color: var(--text-secondary);
+}
+
+.phase-status.active {
+  background-color: var(--brand-teal-soft);
+  color: var(--brand-teal);
+}
+
+.phase-title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--brand-navy);
+  margin-bottom: 0.6rem;
+}
+
+.phase-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.58;
+  margin-bottom: 1rem;
+}
+
+.phase-deliverables {
+  border-top: 1px solid var(--border-light);
+  padding-top: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.phase-deliverable-item {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.phase-deliverable-item::before {
+  content: "→";
+  color: var(--brand-teal);
+  font-weight: 700;
+}
+
+/* ==========================================================================
+   Section 05 — Kubernetes Deployment & Quickstart Terminal
+   ========================================================================== */
+.deploy-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.prereq-list {
+  margin-top: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.prereq-item {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-sm);
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.prereq-name {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--brand-navy);
+}
+
+.prereq-detail {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  margin-top: 0.15rem;
+}
+
+.prereq-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--brand-teal);
+  background-color: var(--brand-teal-soft);
+  padding: 0.25rem 0.55rem;
+  border-radius: var(--radius-xs);
+  white-space: nowrap;
+}
+
+.terminal-window {
+  background-color: var(--bg-obsidian);
+  border: 1px solid var(--border-dark-strong);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+}
+
+.terminal-topbar {
+  background-color: var(--bg-obsidian-surface);
+  border-bottom: 1px solid var(--border-dark);
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.terminal-tabs {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.term-tab-btn {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--text-on-dark-muted);
+  padding: 0.4rem 0.8rem;
+  border-radius: var(--radius-xs);
+  transition: all 0.15s ease;
+}
+
+.term-tab-btn.active {
+  background-color: var(--brand-teal);
+  color: #ffffff;
+}
+
+.copy-cmd-btn {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-on-dark-secondary);
+  background-color: var(--bg-obsidian-elevated);
+  border: 1px solid var(--border-dark-strong);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-xs);
+  transition: all 0.15s ease;
+}
+
+.copy-cmd-btn:hover {
+  color: #ffffff;
+  border-color: var(--brand-teal-bright);
+}
+
+.terminal-content {
+  padding: 1.5rem;
+  overflow-x: auto;
+}
+
+.terminal-pre {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  line-height: 1.65;
+  color: var(--text-on-dark);
+}
+
+/* ==========================================================================
+   Section 06 — Corporate Profile (Dataxera Sdn Bhd) & Enterprise Briefing
+   ========================================================================== */
+.corporate-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+.corporate-brand-showcase {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1.35rem 1.5rem;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  margin-top: 1.5rem;
+  box-shadow: var(--shadow-xs);
+}
+
+.corporate-stacked-logo {
+  width: 96px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.corporate-brand-meta h3 {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--brand-navy);
+  margin-bottom: 0.25rem;
+}
+
+.corporate-brand-meta p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.tier-comparison {
+  margin-top: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.tier-box {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+.tier-box.enterprise-tier {
+  border-color: var(--brand-teal);
+  background-color: var(--bg-subtle);
+}
+
+.tier-label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--brand-teal);
+  margin-bottom: 0.35rem;
+}
+
+.tier-name {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--brand-navy);
+  margin-bottom: 0.75rem;
+}
+
+.tier-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.tier-list li::before {
+  content: "✓ ";
+  color: var(--brand-teal);
+  font-weight: 700;
+}
+
+/* Inquiry Form Card */
+.inquiry-card {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  padding: 2.25rem;
+  box-shadow: var(--shadow-md);
+}
+
+.inquiry-card h3 {
+  font-family: var(--font-display);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--brand-navy);
+  margin-bottom: 0.4rem;
+}
+
+.inquiry-card p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.form-group.full-width {
+  grid-column: 1 / -1;
+}
+
+.form-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--brand-navy);
+}
+
+.form-input,
+.form-select,
+.form-textarea {
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  background-color: var(--bg-canvas);
+  border: 1px solid var(--border-light-strong);
+  border-radius: var(--radius-xs);
+  padding: 0.65rem 0.85rem;
+  transition: border-color 0.15s ease, background-color 0.15s ease;
+}
+
+.form-input:focus,
+.form-select:focus,
+.form-textarea:focus {
+  outline: none;
+  border-color: var(--brand-teal);
+  background-color: var(--bg-surface);
+}
+
+.form-feedback {
+  display: none;
+  margin-top: 1rem;
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+  background-color: var(--brand-teal-soft);
+  color: var(--brand-teal);
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.form-feedback.visible {
+  display: block;
+}
+
+/* ==========================================================================
+   Footer — Dataxera Sdn Bhd (#141c29 Brand Slate-Navy)
+   ========================================================================== */
+.site-footer {
+  background-color: var(--brand-navy);
+  color: var(--text-on-dark-secondary);
+  padding: 4.5rem 0 2.5rem;
+  border-top: 1px solid var(--border-dark);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr repeat(3, 1fr);
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.footer-logo-badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 0.55rem 0.95rem;
+  border-radius: var(--radius-sm);
+}
+
+.footer-logo-img {
+  height: 30px;
+  width: auto;
+  display: block;
+}
+
+.footer-brand-desc {
+  font-size: 0.875rem;
+  color: var(--text-on-dark-muted);
+  margin-top: 1rem;
+  max-width: 36ch;
+  line-height: 1.6;
+}
+
+.footer-col-title {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--brand-teal-bright);
+  margin-bottom: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.875rem;
+}
+
+.footer-links a {
+  color: var(--text-on-dark-secondary);
+}
+
+.footer-links a:hover {
+  color: var(--brand-teal-bright);
+}
+
+.footer-bottom {
+  padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+  font-size: 0.8rem;
+  color: var(--text-on-dark-muted);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1080px) {
+  .hero-layout,
+  .section-header-split,
+  .stack-workspace,
+  .blueprint-top,
+  .blueprint-code-footer,
+  .deploy-grid,
+  .corporate-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pillars-table-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pillar-cell:nth-child(3n) {
+    border-right: 1px solid var(--border-light);
+  }
+
+  .pillar-cell:nth-child(2n) {
+    border-right: none;
+  }
+
+  .solutions-tabs-nav,
+  .roadmap-timeline {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pipeline-stages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stack-dossier {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .utility-bar-right {
+    display: none;
+  }
+
+  .nav-links,
+  .nav-actions {
+    display: none;
+  }
+
+  .mobile-menu-toggle {
+    display: inline-flex;
+  }
+
+  .site-header.mobile-open .nav-links {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 4.75rem;
+    left: 0;
+    right: 0;
+    background-color: var(--bg-surface);
+    border-bottom: 1px solid var(--border-light);
+    padding: 1.25rem;
+    gap: 1rem;
+    box-shadow: var(--shadow-md);
+  }
+
+  .hero-product-lockup {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.65rem;
+  }
+
+  .hero-lockup-divider {
+    display: none;
+  }
+
+  .hero-metrics-strip {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pillars-table-grid,
+  .stack-catalog-grid,
+  .solutions-tabs-nav,
+  .pipeline-stages-grid,
+  .roadmap-timeline,
+  .tier-comparison,
+  .form-grid,
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pillar-cell {
+    border-right: none !important;
+    border-bottom: 1px solid var(--border-light) !important;
+  }
+
+  .blueprint-top,
+  .blueprint-pipeline-section,
+  .blueprint-code-footer {
+    padding: 1.5rem;
+  }
+}
