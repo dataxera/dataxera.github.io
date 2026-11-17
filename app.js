@@ -122,49 +122,49 @@ const CITADEL_STACK_DATA = {
 
 const SOLUTION_BLUEPRINTS = {
   disaster: {
-    tag: 'ENTITY 360 // PUBLIC SAFETY & RESILIENCE',
+    tag: 'ENTITY 360 // MONITORING & ALERTING',
     isEntity: true,
-    headline: 'Natural Disaster 360: Unified Hazard, Asset & Citizen Readiness',
-    narrative: 'Natural Disaster 360 applies the Entity 360 model to emergency management—unifying live rainfall, river-level, seismic, and weather telemetry with critical infrastructure, evacuation shelters, and vulnerable population registries into a single operational view.',
+    headline: 'Monitoring & Alert 360: Real-Time Situational Intelligence & Early Warning',
+    narrative: 'Monitoring & Alert 360 unifies live sensor telemetry, threshold alerts, and regional asset registries into a single operational command view—built for mission-critical scenarios such as natural disaster early warning (flood, weather, and seismic monitoring), utility grid supervision, and environmental compliance.',
     outcomes: [
-      { metric: '360° View', label: 'Links live hazard telemetry directly to regional assets & communities' },
-      { metric: 'Sub-Second', label: 'Interactive geospatial risk maps & catchment drills for commanders' },
-      { metric: '100% Sovereign', label: 'Full national & agency control over sensitive infrastructure data' }
+      { metric: '360° View', label: 'Links live telemetry & alerts directly to regional assets & teams' },
+      { metric: 'Sub-Second', label: 'Interactive geospatial maps & alert drill-downs for operators' },
+      { metric: '100% Sovereign', label: 'Full organizational control over sensitive operational & sensor data' }
     ],
     stages: [
       {
         num: '01 // COLLECT',
-        engine: 'Automated Sensor Intake',
-        detail: 'Gathers live telemetry from river gauges, weather radar, satellite feeds, and regional agency reports.'
+        engine: 'Automated Telemetry Intake',
+        detail: 'Gathers live readings from IoT sensors, field gauges, weather feeds, and operational systems.'
       },
       {
         num: '02 // STREAM',
         engine: 'Live Event Bus',
-        detail: 'Routes threshold breaches and emergency alerts in real time without bottlenecks during peak storms.'
+        detail: 'Routes threshold breaches and anomaly alerts in real time without bottlenecks during peak load.'
       },
       {
         num: '03 // RESOLVE',
-        engine: 'Spatial Entity Linking',
-        detail: 'Connects watersheds, districts, hospitals, shelters, and population registries into a unified entity model.'
+        engine: 'Spatial & Asset Linking',
+        detail: 'Connects monitoring zones, facilities, response teams, and regional registries into one unified model.'
       },
       {
         num: '04 // UNIFY',
-        engine: 'Cross-Agency Analytics',
-        detail: 'Assesses real-time exposure by joining hazard zones with shelter capacity and critical infrastructure.'
+        engine: 'Impact & Exposure Analysis',
+        detail: 'Assesses real-time impact by joining active alerts with asset capacities and affected communities.'
       },
       {
         num: '05 // ACT',
-        engine: 'Command Center Maps',
-        detail: 'Delivers live geospatial dashboards to coordinate civil defense, logistics, and public advisories.'
+        engine: 'Command Center BI',
+        detail: 'Delivers live geospatial dashboards to coordinate rapid response, dispatch, and stakeholder advisories.'
       }
     ],
-    questionsTitle: 'Decisions Enabled for Crisis & Operations Leaders',
-    questionsDesc: 'Commanders and agency directors get a complete 360° view of affected regions, assets, and communities without manual spreadsheet consolidation.',
+    questionsTitle: 'Decisions Enabled for Operations & Response Leaders',
+    questionsDesc: 'Commanders and operations directors get a complete 360° view of active alerts, impacted assets, and response readiness—such as during severe weather or flood events.',
     questions: [
-      'Which river basins and districts have crossed 90% critical flood thresholds in the last 15 minutes?',
-      'How many hospitals, schools, and residents sit inside the projected 6-hour inundation zone?',
-      'Which evacuation shelters have remaining capacity and unobstructed road access?',
-      'How does current catchment rainfall compare against historical 10-year severe flood events?'
+      'Which monitoring zones or river basins have crossed critical alert thresholds in the last 15 minutes?',
+      'Which critical facilities, infrastructure assets, or communities sit inside an active alert zone?',
+      'Which response teams and emergency resources have available capacity nearby?',
+      'How do current sensor anomalies compare against historical baseline and severity patterns?'
     ]
   },
   customer360: {
